@@ -9,33 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import so.sauru.web.utils.Trace;
-
 /**
- * Servlet implementation class Home
+ * Servlet implementation class Hello
  */
-@WebServlet(name="Home", urlPatterns = {"/"})
-public class Home extends HttpServlet {
+@WebServlet(name="Hello", urlPatterns = { "/Hello" })
+public class Hello extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	Trace tracer = new Trace("Home");
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		PrintWriter out = resp.getWriter();
-
-		out.println("Trace --");
-		out.println(tracer.tag("test-0"));
-		tracer.sleep(1 * 1000);
-		out.println(tracer.tag("test-1"));
-		tracer.sleep(1 * 1000);
-		out.println(tracer.tag("test-2"));
-		tracer.sleep(1 * 1000);
-		out.println(tracer.reset());
-		tracer.sleep(1 * 1000);
-		out.println(tracer.tag("test-1"));
+		PrintWriter out = response.getWriter();
+		out.println("Hello");
 	}
 
 	/**
