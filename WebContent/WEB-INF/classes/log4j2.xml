@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC
+  "-//APACHE//DTD LOG4J 1.2//EN" "http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/xml/doc-files/log4j.dtd">
+<Configuration strict="true">
+
+	<!-- Appender, Layout 설정 -->
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %m (%F:%L)%n" />
+		</Console>
+		<!--
+		<File name="file" fileName="./logs/file/sample.log" append="false"> 
+			<PatternLayout pattern="%d %5p [%c] %m%n" />
+		</File>
+		-->
+	</Appenders>
+
+	<!-- Logger 설정 -->
+	<Loggers>
+		<Logger name="TRACE" level="DEBUG" additivity="false">
+			<AppenderRef ref="console" />
+		</Logger>
+		<Root level="ALL">
+			<AppenderRef ref="console" />
+		</Root>
+	</Loggers>
+
+</Configuration>
