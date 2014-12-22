@@ -2,7 +2,7 @@ package so.sauru.web.example;
 
 import javax.servlet.annotation.WebServlet;
 
-import so.sauru.web.utils.Router;
+import so.sauru.web.restar.Router;
 
 /**
  * Servlet implementation class ExRouter
