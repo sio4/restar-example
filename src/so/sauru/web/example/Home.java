@@ -14,7 +14,7 @@ import so.sauru.web.utils.Trace;
 /**
  * Servlet implementation class Home
  */
-@WebServlet(name="Home", urlPatterns = {"/"})
+@WebServlet(name = "Home", urlPatterns = { "/" })
 public class Home extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	Trace tracer = new Trace("Home");

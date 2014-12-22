@@ -20,7 +20,7 @@
 		<Logger name="TRACE" level="DEBUG" additivity="false">
 			<AppenderRef ref="console" />
 		</Logger>
-		<Root level="ALL">
+		<Root level="TRACE">
 			<AppenderRef ref="console" />
 		</Root>
 	</Loggers>
