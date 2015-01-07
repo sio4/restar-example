@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import so.sauru.web.restar.Controller;
+import so.sauru.web.restar.Router;
 
 public class Leg extends Controller {
 
@@ -19,7 +20,7 @@ public class Leg extends Controller {
 		elem1.put("length", "600");
 		elem1.put("finger", "4");
 		list.add(elem1);
-		if (((String) params.get("argument")).equals("*")) {
+		if (((String) params.get(Router.ID)).equals("*")) {
 			elem2.put("name", "front-right");
 			elem2.put("length", "600");
 			elem2.put("finger", "4");
@@ -33,7 +34,13 @@ public class Leg extends Controller {
 			elem4.put("finger", "4");
 			list.add(elem4);
 		} else {
-			logger.trace("ok, just for " + (String) params.get("argument"));
+			logger.trace("ok, just for " + (String) params.get(Router.ID));
+		}
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		data.put(this.getClass().getSimpleName().toLowerCase(), list);
 		return data;
