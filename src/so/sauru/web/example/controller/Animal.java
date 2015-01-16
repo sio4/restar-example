@@ -34,4 +34,22 @@ public class Animal extends Controller {
 		data.put(this.getClass().getSimpleName().toLowerCase(), list);
 		return data;
 	}
+
+	@Override
+	public HashMap<String, Object> create(HashMap<String, Object> message) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HashMap<String, Object> update(HashMap<String, Object> message) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public HashMap<String, Object> delete(HashMap<String, Object> message) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
